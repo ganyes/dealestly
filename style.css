@@ -171,6 +171,54 @@ h1 {
   gap: 18px;
 }
 
+.content-section {
+  margin-top: 30px;
+}
+
+.featured-section {
+  padding: 18px 0 4px;
+}
+
+.section-heading {
+  margin-bottom: 16px;
+}
+
+.section-heading h2,
+.category-section h3 {
+  margin-bottom: 4px;
+  line-height: 1.1;
+}
+
+.section-heading h2 {
+  font-size: 1.45rem;
+}
+
+.section-heading p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.deal-count {
+  margin-top: 8px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.all-deals-section {
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.category-section {
+  margin-top: 24px;
+}
+
+.compact-deal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
 .deal-card {
   position: relative;
   overflow: hidden;
@@ -201,6 +249,17 @@ h1 {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background: #eef1ef;
+}
+
+.image-missing {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #eef1ef;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
 }
 
 .deal-content {
@@ -255,6 +314,26 @@ h1 {
   min-height: 54px;
 }
 
+.compact-deal-card {
+  box-shadow: none;
+}
+
+.compact-deal-card .deal-content {
+  padding: 15px;
+}
+
+.compact-deal-card h2 {
+  font-size: 1.08rem;
+}
+
+.compact-deal-card .current-price {
+  font-size: 1.55rem;
+}
+
+.compact-deal-card .shop-button {
+  min-height: 48px;
+}
+
 .disclaimer {
   margin-top: 28px;
   padding-top: 18px;
@@ -265,6 +344,10 @@ h1 {
 @media (min-width: 760px) {
   .deal-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .compact-deal-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .page-shell {
