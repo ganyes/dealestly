@@ -1,0 +1,273 @@
+:root {
+  --bg: #f7f8f6;
+  --panel: #ffffff;
+  --text: #17211b;
+  --muted: #66706a;
+  --line: #dfe5df;
+  --accent: #0d6b57;
+  --accent-dark: #084637;
+  --badge: #f4c542;
+  --badge-text: #2c2100;
+  --shadow: 0 14px 34px rgba(23, 33, 27, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.home-shell,
+.page-shell {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 28px 18px 42px;
+}
+
+.home-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.home-hero {
+  width: min(100%, 680px);
+  text-align: center;
+}
+
+.brand-kicker,
+.retailer-name {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(2.7rem, 12vw, 5.6rem);
+  line-height: 0.95;
+}
+
+.tagline {
+  margin-bottom: 12px;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.intro,
+.today-heading p,
+.site-header p,
+.disclaimer {
+  color: var(--muted);
+}
+
+.intro {
+  max-width: 520px;
+  margin: 0 auto 28px;
+  font-size: 1.05rem;
+}
+
+.primary-button,
+.shop-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.primary-button {
+  min-width: 220px;
+  padding: 0 26px;
+  font-size: 1rem;
+}
+
+.primary-button:hover,
+.shop-button:hover {
+  background: var(--accent-dark);
+}
+
+.retailers {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.site-header p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.wordmark {
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.today-heading {
+  margin: 10px 0 24px;
+}
+
+.today-heading h1 {
+  font-size: clamp(2.2rem, 11vw, 4.2rem);
+}
+
+.date-line {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.demo-note {
+  max-width: 680px;
+  padding: 12px 14px;
+  border: 1px solid #eadb9b;
+  border-radius: 8px;
+  background: #fff8d8;
+  color: #5a4a0b;
+}
+
+.deal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.deal-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.deal-number {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--text);
+  color: #fff;
+  font-weight: 900;
+}
+
+.deal-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #eef1ef;
+}
+
+.deal-content {
+  padding: 18px;
+}
+
+.deal-content h2 {
+  margin-bottom: 14px;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.old-price {
+  color: var(--muted);
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+.current-price {
+  font-size: 2.05rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.discount-badge {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: var(--badge);
+  color: var(--badge-text);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.promo-note {
+  min-height: 1.3em;
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.shop-button {
+  width: 100%;
+  min-height: 54px;
+}
+
+.disclaimer {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+@media (min-width: 760px) {
+  .deal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-shell {
+    padding-top: 40px;
+  }
+}
